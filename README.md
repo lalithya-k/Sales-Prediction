@@ -46,6 +46,4 @@ This project aims to predict supermarket sales using machine learning techniques
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 Feel free to adjust or expand upon this README file according to your project's specific requirements and details.
-```
 
-Feel free to adjust or expand upon this README file according to your project's specific requirements and details.
