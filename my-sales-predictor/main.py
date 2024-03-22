@@ -146,24 +146,24 @@ y = df['Gender']
 x = df.drop('Gender',axis=1)
 x_train,x_test,y_train,y_test=train_test_split(x,y,random_state=0,test_size=0.2)
 
-# # Training KNN classifier
-# knn=KNeighborsClassifier(n_neighbors=7)
-# knn.fit(x_train,y_train)
-#
-# # Checking shapes of train and test sets
-# print("Shape of x_train:", x_train.shape)
-# print("Shape of x_test:", x_test.shape)
-# print("Shape of y_train:", y_train.shape)
-# print("Shape of y_test:", y_test.shape)
-#
-# print("KNN classifier trained successfully.")
-# print("Number of neighbors:", knn.n_neighbors)
-#
-# # Making predictions using KNN classifier
-# y_pred=knn.predict(x_test)
-# print("Classification Report is:\n",classification_report(y_test,y_pred))
-# print("Confusion Matrix:\n",confusion_matrix(y_test,y_pred))
-# print("Training Score:\n",knn.score(x_train,y_train)*100)
+# Training KNN classifier
+knn=KNeighborsClassifier(n_neighbors=7)
+knn.fit(x_train,y_train)
+
+# Checking shapes of train and test sets
+print("Shape of x_train:", x_train.shape)
+print("Shape of x_test:", x_test.shape)
+print("Shape of y_train:", y_train.shape)
+print("Shape of y_test:", y_test.shape)
+
+print("KNN classifier trained successfully.")
+print("Number of neighbors:", knn.n_neighbors)
+
+# Making predictions using KNN classifier
+y_pred1=knn.predict(x_test)
+print("Classification Report is:\n",classification_report(y_test,y_pred1))
+print("Confusion Matrix:\n",confusion_matrix(y_test,y_pred1))
+print("Training Score:\n",knn.score(x_train,y_train)*100)
 
 # Decision Tree Classifier
 dtree = DecisionTreeClassifier(max_depth=6, random_state=123,criterion='entropy')
@@ -172,9 +172,9 @@ dtree = DecisionTreeClassifier(max_depth=6, random_state=123,criterion='entropy'
 dtree.fit(x_train,y_train)
 
 # Predict the response for test dataset
-y_pred=dtree.predict(x_test)
-print("Classification Report is:\n",classification_report(y_test,y_pred))
-print("Confusion Matrix:\n",confusion_matrix(y_test,y_pred))
+y_pred2=dtree.predict(x_test)
+print("Classification Report is:\n",classification_report(y_test,y_pred2))
+print("Confusion Matrix:\n",confusion_matrix(y_test,y_pred2))
 print("Training Score:\n",dtree.score(x_train,y_train)*100)
 
 # Random Forest Classifier
@@ -182,9 +182,9 @@ rfc=RandomForestClassifier()
 rfc.fit(x_train,y_train)
 
 # Predict the response for test dataset
-y_pred=rfc.predict(x_test)
-print("Classification Report is:\n",classification_report(y_test,y_pred))
-print("Confusion Matrix:\n",confusion_matrix(y_test,y_pred))
+y_pred3=rfc.predict(x_test)
+print("Classification Report is:\n",classification_report(y_test,y_pred3))
+print("Confusion Matrix:\n",confusion_matrix(y_test,y_pred3))
 print("Training Score:\n",rfc.score(x_train,y_train)*100)
 
 # Gradient Boosting Classifier
@@ -192,7 +192,7 @@ gbc=GradientBoostingClassifier()
 gbc.fit(x_train,y_train)
 
 # Predict the response for test dataset
-y_pred=gbc.predict(x_test)
-print("Classification Report is:\n",classification_report(y_test,y_pred))
-print("Confusion Matrix:\n",confusion_matrix(y_test,y_pred))
+y_pred4=gbc.predict(x_test)
+print("Classification Report is:\n",classification_report(y_test,y_pred4))
+print("Confusion Matrix:\n",confusion_matrix(y_test,y_pred4))
 print("Training Score:\n",gbc.score(x_train,y_train)*100)
