@@ -41,9 +41,6 @@ This project aims to predict supermarket sales using machine learning techniques
    python main.py
    ```
 
-## Contributors
-
-- [Your Name]
 
 ## License
 
